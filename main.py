@@ -49,9 +49,3 @@ class encryption():
         for i in range(94):
             encrypted_text = encrypted_text.replace(key[i], keywords[i])
         return encrypted_text
-
-
-ekey = encryption()
-encrypted_text = ekey.encrypt(1347799866, "asdfghjkl")
-print(encrypted_text)
-print(ekey.decrypt(1347799866, encrypted_text))
