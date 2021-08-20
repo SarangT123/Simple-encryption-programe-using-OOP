@@ -6,6 +6,24 @@ keywords = string.split("¶")
 
 class Encryption:
 
+    def generate_key(self):
+        seed = (random.randint(0, 2000000000))
+        random.seed(seed)
+        encrypted = []
+        for i in range(94):
+            key = str(random.randint(0, 10000000))
+            if key in encrypted:
+                def redo():
+                    key = str(random.randint(0, 10000000))
+                    if key in encrypted:
+                        redo()
+                    else:
+                        encrypted.append(key)
+                redo()
+            else:
+                encrypted.append(key)
+        return [seed, encrypted]
+
     def encrypt(self, encryption_key: int, text: str) -> str:
         random.seed(encryption_key)
         key = []
@@ -23,9 +41,3 @@ class Encryption:
         for i in range(94):
             encrypted_text = encrypted_text.replace(key[i], keywords[i])
         return encrypted_text
-
-
-ekey = Encryption()
-encrypted_text = ekey.encrypt(1347799866, "asdfghjkl")
-print(encrypted_text)
-print(ekey.decrypt(1347799866, encrypted_text))
