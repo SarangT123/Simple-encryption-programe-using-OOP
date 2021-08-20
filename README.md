@@ -21,7 +21,7 @@ encrypter.generate_key()
 
 </details>
 <details>
-<summary>Initializing</summary>
+<summary>Encrypting</summary>
 
 <code lang="lang-py">
 encrypter.encrypt(<"key">, <"string">)
