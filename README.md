@@ -6,17 +6,19 @@
 
 <details>
 <summary>Initializing</summary>
-```py
+<code lang="lang-py">
 encrypter = encryption()
-```
+</code>
 
 </details>
 <details>
 <summary>Getting the encryption key</summary>
-```py
+<code lang="lang-py">
 encrypter.generate_key()
+
 #returns the key
-```
+</code>
+
 </details>
 <details>
 <summary>Initializing</summary>
@@ -33,7 +35,9 @@ encrypter.encrypt(<"key">, <"string">)
 <summary>Decrypting</summary>
 
 <code lang="lang-py">
-encrypter.decrypt(<key>, <encrypted text>)
+encrypter.decrypt(<"key">, <"encrypted text">)
+
 #returns decrypted text
 </code>
+
 </details>
